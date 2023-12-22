@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Add from './Add';
+// import Add from './Add';
 import { Navbar } from '../pages/Navbar';
 import TodoCard from './TodoCard'; // Correct for a default export
 
@@ -16,15 +16,12 @@ const Todo = ({ todos, isloading, setTodos, fetchData }) => {
       ) : (
         <>
           <Navbar />
-         
          <TodoCard
          todos={todos}
          setTodos={setTodos}
          fetchData={fetchData}
          />
         </>
-        
-        
       )}
     </div>
   );

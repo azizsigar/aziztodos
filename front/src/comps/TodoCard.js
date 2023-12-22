@@ -103,7 +103,6 @@ const TodoCard = ({ todos, setTodos, fetchData }) => {
     </div>
   );
 };
-
 export default TodoCard;
 
 
