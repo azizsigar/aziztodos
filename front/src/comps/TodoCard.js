@@ -43,6 +43,7 @@ const TodoCard = ({ todos, setTodos, fetchData }) => {
                   >
                     done
                   </span>
+                  
                 </div>
                 <div className="body">
                   <span className="material-symbols-outlined">adjust</span>
@@ -73,6 +74,7 @@ const TodoCard = ({ todos, setTodos, fetchData }) => {
                       <>
                         <a href={todoItem.related_url} target="_blank" rel="noopener noreferrer">
                           <span className="material-symbols-outlined">Link</span>
+                          
                         </a>
                       </>
                     ) : (
@@ -111,7 +113,12 @@ const TodoCard = ({ todos, setTodos, fetchData }) => {
             )}
           </div></div>
       ))}</div>
+      {/* The button to open modal */}
+
+
+
     </div>
+    
   );
 };
 export default TodoCard;
