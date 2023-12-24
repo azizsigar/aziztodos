@@ -11,6 +11,15 @@ const TodoCard = ({ todos, setTodos, fetchData }) => {
       console.error(error);
     }
   };
+  const editTodo = async(id,value)=>{
+    try {
+      const response =await axios.patch(`http://127.0.0.1:8000/api/todo/${id}`,value)
+      const newTodos =todos.map(todo=>todo.id=== id ? response.data : todo)
+      setTodos(newTodos)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   return (
     <div>
@@ -25,7 +34,9 @@ const TodoCard = ({ todos, setTodos, fetchData }) => {
             {todoItem ? (
               <div className="todoCard">
                 <div className="editdelete">
-                  <span className="material-symbols-outlined">edit_note</span>
+                  <span
+                  
+                  className="material-symbols-outlined">edit_note</span>
                   <span
                     className="material-symbols-outlined"
                     onClick={() => deleteTodo(todoItem.id)}
@@ -103,7 +114,6 @@ const TodoCard = ({ todos, setTodos, fetchData }) => {
     </div>
   );
 };
-
 export default TodoCard;
 
 
