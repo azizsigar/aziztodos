@@ -34,6 +34,7 @@ const TodoCard = ({ todos, setTodos, fetchData }) => {
             {todoItem ? (
               <div className="todoCard">
                 <div className="editdelete">
+                <label htmlFor="my_modal_6" className="btn">open modal</label>
                   <span
                   
                   className="material-symbols-outlined">edit_note</span>
@@ -112,10 +113,15 @@ const TodoCard = ({ todos, setTodos, fetchData }) => {
               <></>
             )}
           </div></div>
-      ))}</div>
+      ))}
+      
+      </div>
       {/* The button to open modal */}
 
+{/* The button to open modal */}
 
+
+{/* Put this part before </body> tag */}
 
     </div>
     

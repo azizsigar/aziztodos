@@ -111,7 +111,7 @@ export default function Add({setTodos,fetchData}) {
             <button
             onClick={postTodo}
             >
-            add todonnnnn
+            add todon
             </button>
 
         </div>
